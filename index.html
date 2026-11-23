@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تِسّام للحلول الرقمية | Tessam Digital Solutions</title>
+<meta name="description" content="تِسّام للحلول الرقمية (TDS) — بيت منتجات رقمية عربية، أول منتجاته تحدي كويزورا.">
+<link rel="icon" type="image/svg+xml" href="tessam-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#14532D; --green-2:#1E6B4A; --green-deep:#0E3B21;
+    --cream:#F7F3E9; --cream-2:#FFFDF7; --gold:#E8A90C; --ink:#1C2B23;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Tajawal','Noto Sans Arabic',system-ui,sans-serif;
+    background:var(--cream); color:var(--ink); line-height:1.7;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:10;
+    background:rgba(247,243,233,.92);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(20,83,45,.12);
+  }
+  .nav{
+    max-width:1080px;margin:0 auto;padding:14px 20px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand img{width:40px;height:40px;border-radius:11px}
+  .brand .name{font-weight:900;font-size:22px;color:var(--green)}
+  .brand .lat{font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:700;display:block;line-height:1;margin-top:2px}
+  .nav-links{display:flex;gap:22px;font-weight:700;font-size:15px}
+  .nav-links a{text-decoration:none;color:var(--ink);opacity:.8}
+  .nav-links a:hover{opacity:1;color:var(--green)}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:linear-gradient(160deg,var(--green-2),var(--green-deep));
+    color:var(--cream);text-align:center;
+    padding:88px 20px 96px;position:relative;overflow:hidden;
+  }
+  .hero .dots{
+    position:absolute;inset:0;opacity:.07;pointer-events:none;
+    background-image:radial-gradient(circle at 18% 30%, var(--gold) 0 60px, transparent 61px),
+                     radial-gradient(circle at 85% 70%, var(--cream) 0 90px, transparent 91px),
+                     radial-gradient(circle at 70% 15%, var(--gold) 0 34px, transparent 35px);
+  }
+  .hero-inner{position:relative;max-width:760px;margin:0 auto}
+  .hero .tds{
+    display:inline-block;background:rgba(232,169,12,.16);color:var(--gold);
+    border:1px solid rgba(232,169,12,.45);border-radius:999px;
+    padding:6px 18px;font-weight:700;font-size:14px;letter-spacing:.5px;margin-bottom:22px;
+  }
+  .hero h1{font-size:clamp(30px,5.4vw,50px);font-weight:900;line-height:1.35;margin-bottom:18px}
+  .hero p{font-size:clamp(16px,2.4vw,20px);opacity:.92;max-width:620px;margin:0 auto 34px}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:800;font-size:16px;
+    padding:14px 30px;border-radius:14px;transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{background:var(--gold);color:var(--green-deep)}
+  .btn-ghost{border:2px solid rgba(247,243,233,.55);color:var(--cream)}
+
+  /* ---------- sections ---------- */
+  section{max-width:1080px;margin:0 auto;padding:72px 20px}
+  .sec-label{color:var(--gold);font-weight:800;font-size:14px;letter-spacing:1px;margin-bottom:8px}
+  .sec-title{color:var(--green);font-size:clamp(24px,3.6vw,34px);font-weight:900;margin-bottom:14px}
+  .sec-intro{max-width:640px;opacity:.85;margin-bottom:40px;font-size:17px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .card{
+    background:var(--cream-2);border:1px solid rgba(20,83,45,.14);border-radius:22px;
+    padding:28px;box-shadow:0 10px 30px rgba(20,83,45,.07);
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .card .prod-head{display:flex;align-items:center;gap:14px}
+  .card .prod-head img{width:56px;height:56px;border-radius:14px}
+  .card h3{color:var(--green);font-size:21px;font-weight:900}
+  .card .badge{
+    align-self:flex-start;background:rgba(30,107,74,.1);color:var(--green-2);
+    border-radius:999px;padding:3px 14px;font-size:13px;font-weight:800;
+  }
+  .card .badge.soon{background:rgba(232,169,12,.14);color:#8a6104}
+  .card p{font-size:15.5px;opacity:.85;flex:1}
+  .card .card-link{
+    color:var(--green);font-weight:800;text-decoration:none;font-size:15px;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .card .card-link:hover{color:var(--gold)}
+
+  /* ---------- about / vision ---------- */
+  .about{background:var(--cream-2);border-block:1px solid rgba(20,83,45,.12)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .about img{width:180px;margin:0 auto}
+  .about p{font-size:17px;opacity:.88;margin-bottom:14px}
+  .vision-list{list-style:none;display:grid;gap:14px}
+  .vision-list li{
+    background:var(--cream);border:1px solid rgba(20,83,45,.14);border-radius:16px;
+    padding:16px 44px 16px 20px;font-weight:700;color:var(--green);
+    position:relative;font-size:16px;
+  }
+  .vision-list li::before{
+    content:"";width:10px;height:10px;border-radius:50%;background:var(--gold);
+    position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--green-deep);color:var(--cream);text-align:center;padding:44px 20px;
+  }
+  footer .f-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px}
+  footer .f-brand img{width:34px;height:34px;border-radius:9px}
+  footer .f-brand b{font-size:19px}
+  footer .f-lat{color:var(--gold);font-size:13px;letter-spacing:2px;font-weight:700;margin-bottom:14px}
+  footer small{opacity:.6;font-size:13px}
+
+  @media (max-width:720px){
+    .nav-links{display:none}
+    .about-grid{grid-template-columns:1fr;text-align:center}
+    section{padding:52px 18px}
+    .hero{padding:64px 18px 72px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <img src="tessam-icon.svg" alt="شعار تِسّام">
+      <span>
+        <span class="name">تِسّام</span>
+        <span class="lat">TESSAM</span>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#products">المنتجات</a>
+      <a href="#about">من نحن</a>
+      <a href="#vision">رؤيتنا</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top" style="max-width:none">
+  <div class="dots"></div>
+  <div class="hero-inner">
+    <span class="tds">Tessam Digital Solutions · TDS</span>
+    <h1>حلول رقمية تُبسّط التعلّم والتدريب</h1>
+    <p>«تِسّام» هوية رقمية جديدة لمنتجات عربية بسيطة، وأول ما تقدمه: «تحدي كويزورا»، منصة بتحوّل المادة العلمية إلى اختبارات تفاعلية في شكل لعبة.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://ebtessm.github.io/quiz/" target="_blank" rel="noopener">جرّب تحدي كويزورا</a>
+      <a class="btn btn-ghost" href="#about">تعرّف علينا</a>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <p class="sec-label">منتجاتنا</p>
+  <h2 class="sec-title">أول منتجات تِسّام</h2>
+  <p class="sec-intro">متاح الآن للتجربة المجانية.</p>
+  <div class="cards">
+    <article class="card">
+      <div class="prod-head">
+        <img src="https://ebtessm.github.io/quiz/logo.png" alt="شعار تحدي كويزورا">
+        <h3>تحدي كويزورا</h3>
+      </div>
+      <span class="badge">متاح الآن — النسخة اللايت</span>
+      <p>ارفع المادة العلمية، والأسئلة تتولّد من المحتوى مع إمكانية التعديل، ثم شارك الاختبار بلينك. المشاركون يدخلون بأسمائهم من غير حسابات، وتظهر محاولاتهم المكتملة للمدرب.</p>
+      <a class="card-link" href="https://ebtessm.github.io/quiz/" target="_blank" rel="noopener">زيارة المنصة ←</a>
+    </article>
+  </div>
+</section>
+
+<div class="about" id="about">
+  <section>
+    <div class="about-grid">
+      <div>
+        <p class="sec-label">من نحن</p>
+        <h2 class="sec-title">هوية لمنتجات رقمية عربية</h2>
+        <p>تِسّام للحلول الرقمية (Tessam Digital Solutions) هوية جديدة لمنتجات رقمية عربية الهوية: بسيطة في الاستخدام، ومفيدة في الحياة اليومية للمعلم والمتدرب وصاحب العمل.</p>
+        <p>أول ما تقدمه تِسّام منصة «تحدي كويزورا»، وبدأنا بالتعلّم لأنه أقرب مجال لقلبنا.</p>
+      </div>
+      <img src="tessam-lockup.svg" alt="تِسّام للحلول الرقمية">
+    </div>
+  </section>
+</div>
+
+<section id="vision">
+  <p class="sec-label">رؤيتنا</p>
+  <h2 class="sec-title">أدوات بسيطة، أثر كبير</h2>
+  <p class="sec-intro">نؤمن إن الأداة البسيطة تغيّر طريقة المذاكرة والتدريب. عشان كده كل منتجاتنا بتقوم على تلات قواعد:</p>
+  <ul class="vision-list">
+    <li>عربية الهوية في التصميم والتجربة</li>
+    <li>بساطة الاستخدام قبل أي حاجة</li>
+    <li>التطوير المستمر بملاحظات المستخدمين</li>
+  </ul>
+</section>
+
+<footer>
+  <div class="f-brand">
+    <img src="tessam-icon.svg" alt="">
+    <b>تِسّام للحلول الرقمية</b>
+  </div>
+  <div class="f-lat">TESSAM DIGITAL SOLUTIONS · TDS</div>
+  <small>صُنع في مصر · ٢٠٢٦</small>
+</footer>
+
+</body>
+</html>
